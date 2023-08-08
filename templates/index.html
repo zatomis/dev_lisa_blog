@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
 {% block head_title %} Sensive Blog - Home {% endblock %}
 {% block body_context %}
- <main class="site-main">
+<main class="site-main">
   <!--================Hero Banner start =================-->
   <section class="mb-30px">
     <div class="container">
@@ -17,7 +16,6 @@
     </div>
   </section>
   <!--================Hero Banner end =================-->
-
   <!--================ Blog slider start =================-->
   <section>
     <div class="container">
@@ -26,11 +24,11 @@
           <div class="flex-fill" style="margin-right: 30px;">
             <div class="card blog__slide text-center">
               <div class="blog__slide__img">
-                    {% if post.image_url  %}
-                      <img class="card-img rounded-0" src={{post.image_url}}>
-                    {% else %}
-                      <img class="card-img rounded-0" src="{% static 'img/banner/blog.png' %}">
-                    {% endif %}
+                {% if post.image_url  %}
+                  <img class="card-img rounded-0" src={{post.image_url}}>
+                {% else %}
+                  <img class="card-img rounded-0" src="{% static 'img/banner/blog.png' %}">
+                {% endif %}
               </div>
               <div class="blog__slide__content">
                 <h3><a href="#">{{post.title}}</a></h3>
@@ -43,7 +41,6 @@
     </div>
   </section>
   <!--================ Blog slider end =================-->
-
   <!--================ Start Blog Post Area =================-->
   <section class="blog-post-area section-margin mt-4">
     <div class="container">
@@ -119,5 +116,4 @@
   </section>
   <!--================ End Blog Post Area =================-->
 </main>
-<script src="{% static 'scripts.js' %}"></script>
 {% endblock %}
