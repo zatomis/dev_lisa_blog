@@ -6,7 +6,7 @@ env.read_env()
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-COMPANY_COORDINATES = [55.751244, 37.618423]
+COMPANY_COORDINATES = [48.34900516639258, 40.27132987976075]
 
 SECRET_KEY = env.str("SECRET_KEY", "REPLACE_ME")
 

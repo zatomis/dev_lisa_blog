@@ -75,10 +75,10 @@ def contact(request):
     """
     # позже здесь будет код для статистики заходов на эту страницу
     # и для записи фидбека
-    folium_map = folium.Map(location=COMPANY_COORDINATES, zoom_start=12)
+    folium_map = folium.Map(location=COMPANY_COORDINATES, zoom_start=14)
     folium.Marker(
         COMPANY_COORDINATES,
-        tooltip="Мы здесь",
+        tooltip="Миниотель Александровский",
     ).add_to(folium_map)
     html_map = folium_map._repr_html_()
     return render(request, 'contact.html', {"html_map": html_map})
