@@ -8,7 +8,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 COMPANY_COORDINATES = [48.34900516639258, 40.27132987976075]
 
-SECRET_KEY = env.str("SECRET_KEY", "REPLACE_ME")
+SECRET_KEY = env.str("SECRET_DJANGO_KEY", "REPLACE_ME")
 
 DEBUG = env.bool("DEBUG", True)
 # DEBUG = env.bool("DEBUG", False)
@@ -22,9 +22,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'debug_toolbar',
-
     'blog',
 ]
 
@@ -104,5 +102,5 @@ STATIC_ROOT = os.getenv("STATIC_ROOT")
 MEDIA_URL = os.getenv('MEDIA_URL', '/media/')
 
 INTERNAL_IPS = [
-    '127.0.0.1',
+    '',
 ]
